@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="BOTTOM_LEFT" spacing="20.0"
+      xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12"
+      fx:controller="com.example.calorie_calc.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label style="-fx-font-size: 18; -fx-font-weight: bold" text="Kalorieberegner" />
+   <Separator prefWidth="200.0" />
+    <Label text="Vælg aktivitet" />
+   <ChoiceBox fx:id="activityChoice" prefHeight="25.0" prefWidth="200.0" />
+
+    <Label text="Hvor længe? (minutter)" />
+    <TextField fx:id="minutesTextField" />
+
+    <Label text="Hvad er din vægt? (kg)" />
+    <TextField fx:id="weightTextField" />
+
+    <Button maxWidth="-Infinity" minWidth="-Infinity" onAction="#onCalculateClick"
+            prefHeight="25.0" prefWidth="200.0" text="Beregn" />
+    <Label fx:id="calculationResult" />
+</VBox>
